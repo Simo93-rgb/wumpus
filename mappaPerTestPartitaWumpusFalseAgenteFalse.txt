@@ -1,0 +1,59 @@
+Caratteristiche della mappa
+===========================
+Dimensione del lato della mappa: 5
+Numero delle voragini: 1
+Numero dei tesori: 1
+Numero dei superstiti: 1
+Numero dei cuccioli: 1
+
+Valori dell'agente
+==================
+Indice di riga dell'agente: 0
+Indice di colonna dell'agente: 0
+Nome dell'agente: Link
+Stato in gioco dell'agente: false
+Numero di frecce dell'agente: 1
+Punteggio dell'agente: 0
+
+Valori del Wumpus
+=================
+Indice di riga del Wumpus: 2
+Indice di colonna del Wumpus: 2
+Nome del Wumpus: Ganon
+Valore del Wumpus: 400
+Stato in gioco del Wumpus: false
+
+Elenco delle voragini
+=====================
+Voragine n. 0
+Indice di riga: 3
+Indice di colonna: 0
+
+Elenco dei tesori
+=================
+Tesoro n. 0
+Indice di riga: 0
+Indice di colonna: 4
+Valore: 100
+Stato in gioco: true
+
+Elenco dei superstiti
+=====================
+Superstite n. 0
+Indice di riga: 1
+Indice di colonna: 2
+Nome: superstite n. 1
+Valore: 150
+Stato in gioco: true
+
+Elenco dei cuccioli di Wumpus
+=============================
+Cucciolo di Wumpus n. 0
+Indice di riga: 4
+Indice di colonna: 0
+Nome: cucciolo n. 1
+Stato in gioco: true
+
+Caselle scoperte
+================
+0:0:255:255:255

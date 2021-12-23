@@ -1,0 +1,66 @@
+Struttra file di salvataggio:
+
+Caratteristiche della mappa
+===========================
+- int: latoMappa (dimensione in caselle del lato della mappa)
+- int: numero delle voragini presenti sulla mappa
+- int: dimensione Tesoro[] tesori (numero di tesori)
+- int: dimensione Superstite[] superstiti (numero di superstiti)
+- int: dimensione CuccioloDiWumpus[] cuccioli (numero di cuccioli)
+
+Valori dell'agente
+==================
+- int: Agente - indice di riga
+- int: Agente - indice di colonna
+- String: Agente - nome
+- int: Agente - in gioco (booleano convertito in int)
+- int: Agente - numero frecce
+- int: Agente - punteggio
+
+Valori del Wumpus
+=================
+- int: Wumpus - indice di riga
+- int: Wumpus - indice di colonna
+- String: Wumpus - nome
+- int: Wumpus - valore
+- int: Wumpus - in gioco (booleano convertito in int)
+
+Elenco delle voragini
+=====================
+una serie di gruppi di tre interi che rappresentano le voragini presenti sulla mappa
+- int: numero progressivo che identifica la voragine
+- int: Voragine - indice di riga
+- int: Voragine - indice di colonna
+
+Elenco dei tesori
+=================
+una serie di gruppi di cinque interi che rappresentano i tesori presenti sulla mappa
+- int: numero progressivo che identifica il tesoro
+- int: Tesoro - indice di riga
+- int: Tesoro - indice di colonna
+- int: Tesoro - valore
+- int: Tesoro - in gioco (booleano convertito in int)
+
+Elenco dei superstiti
+=====================
+una serie di gruppi di sei valori che rappresentano i superstiti presenti sulla mappa
+- int: numero progressivo che identifica il superstite
+- int: Superstite - indice di riga
+- int: Superstite - indice di colonna
+- String: Superstite - nome
+- int: Superstite - valore
+- int: Superstite - in gioco (booleano convertito in int)
+
+Elenco dei cuccioli di Wumpus
+=============================
+una serie di gruppi di cinque valori che rappresentano i cuccioli presenti sulla mappa
+- int: numero progressivo che identifica il cucciolo
+- int: CuccioloDiWumpus - indice di riga
+- int: CuccioloDiWumpus - indice di colonna
+- String: CuccioloDiWumpus - nome
+- int: CuccioloDiWumpus - in gioco (booleano convertito in int)
+
+Caselle scoperte
+================
+una serie di cinque valori che identificano le caselle scoperte dall'agente
+<indice di riga>:<indice di colonna>:<componente RED del colore della casella>:<componente GREEN del colore della casella>:<componente BLUE del colore della casella>

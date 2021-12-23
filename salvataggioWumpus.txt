@@ -1,0 +1,165 @@
+Caratteristiche della mappa
+===========================
+Dimensione del lato della mappa: 10
+Numero delle voragini: 27
+Numero dei tesori: 3
+Numero dei superstiti: 2
+Numero dei cuccioli: 2
+
+Valori dell'agente
+==================
+Indice di riga dell'agente: 3
+Indice di colonna dell'agente: 1
+Nome dell'agente: Link
+Stato in gioco dell'agente: true
+Numero di frecce dell'agente: 1
+Punteggio dell'agente: 300
+
+Valori del Wumpus
+=================
+Indice di riga del Wumpus: 1
+Indice di colonna del Wumpus: 4
+Nome del Wumpus: Ganon
+Valore del Wumpus: 400
+Stato in gioco del Wumpus: true
+
+Elenco delle voragini
+=====================
+Voragine n. 0
+Indice di riga: 0
+Indice di colonna: 3
+Voragine n. 1
+Indice di riga: 0
+Indice di colonna: 6
+Voragine n. 2
+Indice di riga: 1
+Indice di colonna: 3
+Voragine n. 3
+Indice di riga: 1
+Indice di colonna: 5
+Voragine n. 4
+Indice di riga: 1
+Indice di colonna: 8
+Voragine n. 5
+Indice di riga: 2
+Indice di colonna: 5
+Voragine n. 6
+Indice di riga: 2
+Indice di colonna: 6
+Voragine n. 7
+Indice di riga: 2
+Indice di colonna: 9
+Voragine n. 8
+Indice di riga: 3
+Indice di colonna: 9
+Voragine n. 9
+Indice di riga: 4
+Indice di colonna: 0
+Voragine n. 10
+Indice di riga: 4
+Indice di colonna: 3
+Voragine n. 11
+Indice di riga: 4
+Indice di colonna: 8
+Voragine n. 12
+Indice di riga: 5
+Indice di colonna: 2
+Voragine n. 13
+Indice di riga: 5
+Indice di colonna: 3
+Voragine n. 14
+Indice di riga: 5
+Indice di colonna: 4
+Voragine n. 15
+Indice di riga: 6
+Indice di colonna: 8
+Voragine n. 16
+Indice di riga: 7
+Indice di colonna: 0
+Voragine n. 17
+Indice di riga: 7
+Indice di colonna: 3
+Voragine n. 18
+Indice di riga: 7
+Indice di colonna: 4
+Voragine n. 19
+Indice di riga: 7
+Indice di colonna: 7
+Voragine n. 20
+Indice di riga: 8
+Indice di colonna: 3
+Voragine n. 21
+Indice di riga: 8
+Indice di colonna: 4
+Voragine n. 22
+Indice di riga: 9
+Indice di colonna: 1
+Voragine n. 23
+Indice di riga: 9
+Indice di colonna: 2
+Voragine n. 24
+Indice di riga: 9
+Indice di colonna: 6
+Voragine n. 25
+Indice di riga: 9
+Indice di colonna: 8
+Voragine n. 26
+Indice di riga: 9
+Indice di colonna: 9
+
+Elenco dei tesori
+=================
+Tesoro n. 0
+Indice di riga: 8
+Indice di colonna: 1
+Valore: 100
+Stato in gioco: true
+Tesoro n. 1
+Indice di riga: 1
+Indice di colonna: 2
+Valore: 150
+Stato in gioco: false
+Tesoro n. 2
+Indice di riga: 9
+Indice di colonna: 4
+Valore: 200
+Stato in gioco: true
+
+Elenco dei superstiti
+=====================
+Superstite n. 0
+Indice di riga: 2
+Indice di colonna: 8
+Nome: superstite n. 1
+Valore: 200
+Stato in gioco: true
+Superstite n. 1
+Indice di riga: 3
+Indice di colonna: 1
+Nome: superstite n. 2
+Valore: 150
+Stato in gioco: false
+
+Elenco dei cuccioli di Wumpus
+=============================
+Cucciolo di Wumpus n. 0
+Indice di riga: 9
+Indice di colonna: 0
+Nome: cucciolo n. 1
+Stato in gioco: true
+Cucciolo di Wumpus n. 1
+Indice di riga: 5
+Indice di colonna: 9
+Nome: cucciolo n. 2
+Stato in gioco: true
+
+Caselle scoperte
+================
+0:0:255:255:255
+1:0:255:255:255
+1:1:255:255:255
+1:2:0:0:255
+2:0:255:255:255
+2:1:255:255:255
+2:2:255:255:255
+3:1:255:255:255

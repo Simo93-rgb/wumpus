@@ -1,0 +1,30 @@
+*********************************WUMPUS************************************
+Il Wumpus, un puzzolente e pericoloso mostro, abita una insidiosa caverna insieme ai suoi cuccioli, questa poi ha pure delle 
+voragini cosi' profonde da sentirne una brezza. Dentro la dimora del Wumpus si trovano dei tesori e anche dei superstiti da 
+portare in salvo. L'agente, coraggioso protagonista, entra nella caverna per tentare di salvare i superstiti e portarsi a 
+casa il bottino ma dovra' stare attento a non incrociare il Wumpus e i suoi cuccioli o ne paghera' le conseguenze, anche 
+con la vita. In pericolo pero' vi e' anche il Wumpus poiche' l'agente e' armato. Chi avra' la meglio mettera' la parola 
+fine a questa avventura.  
+
+********************************Movimenti************************************
+Su = W | Sinistra = A | Giu' = S | Destra = D 
+
+Lancio Freccia
+Su = frecciaSU | Sinistra = frecciaSX | Giu' = frecciaGIU' | Destra = frecciaDX
+La freccia colpira' la casella adiacente all'agente secondo la direzione selezionata.
+
+*******************************Indicatori*************************************
+Puzza: la puzza avvisa della presenza del Wumpus e compare come indicatore rosso nelle 4 caselle adiacenti al mostro.
+Brezza: la brezza indica la presenza delle voragini e compare come indicatore blu nelle 4 caselle adiacenti alla voragine.
+
+Nel caso la stessa casella fosse caratterizzata sia dalla brezza che dalla puzza assumera' il colore nero.
+
+********************************Incontri**************************************
+Cucciolo wumpus: l'agente perdera' o la freccia o del denaro.
+Voragine: l'agente perde la vita.
+Superstite: l'agente guadagna punti
+Wumpus: l'agente perde la vita
+
+
+****************************Riferimenti esterni*******************************
+https://www.javatpoint.com/the-wumpus-world-in-artificial-intelligence#:~:text=The%20Wumpus%20world%20is%20a
