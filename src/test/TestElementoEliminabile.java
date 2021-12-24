@@ -1,19 +1,19 @@
 package test;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
-import java.util.Vector;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.util.Vector;
+
 class TestElementoEliminabile {
 	
-	private class ElementoEliminabile extends model.elementi.ElementoEliminabile {
+	private static class ElementoEliminabile extends model.elementi.ElementoEliminabile {
 
 		private ElementoEliminabile(int latoScacchiera, String nome) throws IllegalArgumentException {
 			super(latoScacchiera, nome);
@@ -42,7 +42,7 @@ class TestElementoEliminabile {
 
 	@Test
 	void testCostruttoreConLatoScacchiera1() {
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {new ElementoEliminabile(0, "Elemento di prova");});
+		Assertions.assertThrows(IllegalArgumentException.class, () -> new ElementoEliminabile(0, "Elemento di prova"));
 	}
 	
 	@ParameterizedTest
@@ -53,13 +53,13 @@ class TestElementoEliminabile {
 			Assertions.assertTrue(Boolean.parseBoolean(atteso));
 		}
 		catch (IllegalArgumentException e) {
-			Assertions.assertTrue(!(Boolean.parseBoolean(atteso)));
+			Assertions.assertFalse(Boolean.parseBoolean(atteso));
 		}
 	}
 	
 	@Test
 	void testCostruttoreConLatoScacchieraEIndici1() {
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {new ElementoEliminabile(0, 0, 0, "Elemento di prova") {};}); 
+		Assertions.assertThrows(IllegalArgumentException.class, () -> new ElementoEliminabile(0, 0, 0, "Elemento di prova") {});
 	}
 	
 	@ParameterizedTest
@@ -70,7 +70,7 @@ class TestElementoEliminabile {
 			Assertions.assertTrue(Boolean.parseBoolean(atteso));
 		}
 		catch (IndexOutOfBoundsException e) {
-			Assertions.assertTrue(!(Boolean.parseBoolean(atteso)));
+			Assertions.assertFalse(Boolean.parseBoolean(atteso));
 		}
 	}
 	
@@ -82,7 +82,7 @@ class TestElementoEliminabile {
 			Assertions.assertTrue(atteso);
 		}
 		catch (IndexOutOfBoundsException e) {
-			Assertions.assertTrue(!(atteso));
+			Assertions.assertFalse(atteso);
 		}
 	}
 	
@@ -105,28 +105,24 @@ class TestElementoEliminabile {
 	@Test
 	void testEliminaElemento3() {
 		this.elementoPerTest.eliminaElemento();
-		Assertions.assertEquals(false, this.elementoPerTest.getInGioco());
+		Assertions.assertFalse(this.elementoPerTest.getInGioco());
 	}
 	
 	@Test
 	void testPresenzaPropertyChangeSupport() {
 		Assertions.assertNotNull(this.elementoPerTest.getSupportoEventi());
-		Assertions.assertTrue(this.elementoPerTest.getSupportoEventi() instanceof PropertyChangeSupport);
 	}
 
 	@Test
 	void testAggiuntaListener() {
-		Vector<PropertyChangeEvent> eventiLanciati = new Vector<PropertyChangeEvent>();
-		
-		PropertyChangeListener listenerDiProva = new PropertyChangeListener() {
-			@Override
-			public void propertyChange(PropertyChangeEvent evt) {
-				if(evt.getPropertyName().equals("eliminazione")) {
-					eventiLanciati.add(evt);
-				}
+		Vector<PropertyChangeEvent> eventiLanciati = new Vector<>();
+
+		PropertyChangeListener listenerDiProva = evt -> {
+			if(evt.getPropertyName().equals("eliminazione")) {
+				eventiLanciati.add(evt);
 			}
 		};
-		
+
 		this.elementoPerTest.aggiungiListener(listenerDiProva);
 		PropertyChangeListener[] listenerRegistrati = this.elementoPerTest.getSupportoEventi().getPropertyChangeListeners();
 		Assertions.assertEquals(1, listenerRegistrati.length);
@@ -134,14 +130,11 @@ class TestElementoEliminabile {
 	
 	@Test
 	void testLancioEventoEliminazione1() {
-		Vector<PropertyChangeEvent> eventiLanciati = new Vector<PropertyChangeEvent>();
+		Vector<PropertyChangeEvent> eventiLanciati = new Vector<>();
 		
-		PropertyChangeListener listenerDiProva = new PropertyChangeListener() {
-			@Override
-			public void propertyChange(PropertyChangeEvent evt) {
-				if(evt.getPropertyName().equals("eliminazione")) {
-					eventiLanciati.add(evt);
-				}
+		PropertyChangeListener listenerDiProva = evt -> {
+			if(evt.getPropertyName().equals("eliminazione")) {
+				eventiLanciati.add(evt);
 			}
 		};
 		
@@ -154,14 +147,11 @@ class TestElementoEliminabile {
 	
 	@Test
 	void testLancioEventoEliminazione2() {
-		Vector<PropertyChangeEvent> eventiLanciati = new Vector<PropertyChangeEvent>();
+		Vector<PropertyChangeEvent> eventiLanciati = new Vector<>();
 		
-		PropertyChangeListener listenerDiProva = new PropertyChangeListener() {
-			@Override
-			public void propertyChange(PropertyChangeEvent evt) {
-				if(evt.getPropertyName().equals("eliminazione")) {
-					eventiLanciati.add(evt);
-				}
+		PropertyChangeListener listenerDiProva = evt -> {
+			if(evt.getPropertyName().equals("eliminazione")) {
+				eventiLanciati.add(evt);
 			}
 		};
 		
@@ -174,14 +164,11 @@ class TestElementoEliminabile {
 	
 	@Test
 	void testLancioEventoEliminazione3() {
-		Vector<PropertyChangeEvent> eventiLanciati = new Vector<PropertyChangeEvent>();
+		Vector<PropertyChangeEvent> eventiLanciati = new Vector<>();
 		
-		PropertyChangeListener listenerDiProva = new PropertyChangeListener() {
-			@Override
-			public void propertyChange(PropertyChangeEvent evt) {
-				if(evt.getPropertyName().equals("eliminazione")) {
-					eventiLanciati.add(evt);
-				}
+		PropertyChangeListener listenerDiProva = evt -> {
+			if(evt.getPropertyName().equals("eliminazione")) {
+				eventiLanciati.add(evt);
 			}
 		};
 		
